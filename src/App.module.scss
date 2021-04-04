@@ -9,6 +9,7 @@ body{
     font-family: 'Zilla Slab', serif;
     font-size: $body-font-size;
     line-height: $body-line-height;
+    background-color: $dark-color;
 }
 
 h1 {
@@ -17,4 +18,13 @@ h1 {
 
 h2 {
     font-size: $heading-two-font-size;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
