@@ -1,6 +1,11 @@
 @import "../../styles/variables";
 
 .Header {
+  background-color: $dark-color;
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: 25px;
+  position: sticky;
+  top: 0;
   .HeaderContent {
     align-items: center;
     display: flex;
