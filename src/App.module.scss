@@ -1,5 +1,20 @@
 @import 'normalize.css';
+@import './styles/variables';
+
+html {
+    font-size: $root-font-size;
+}
 
 body{
     font-family: 'Zilla Slab', serif;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+}
+
+h1 {
+    font-size: $heading-one-font-size;
+}
+
+h2 {
+    font-size: $heading-two-font-size;
 }
