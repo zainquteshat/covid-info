@@ -1,30 +1,30 @@
-@import 'normalize.css';
-@import './styles/variables';
+@import "normalize.css";
+@import "./styles/variables";
 
 html {
-    font-size: $root-font-size;
+  font-size: $root-font-size;
 }
 
-body{
-    font-family: 'Zilla Slab', serif;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
-    background-color: $dark-color;
+body {
+  font-family: "Zilla Slab", serif;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  background-color: $dark-color;
 }
 
 h1 {
-    font-size: $heading-one-font-size;
+  font-size: $heading-one-font-size;
 }
 
 h2 {
-    font-size: $heading-two-font-size;
+  font-size: $heading-two-font-size;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

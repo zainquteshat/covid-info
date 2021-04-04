@@ -1,19 +1,19 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.Header{
-    .HeaderContent {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        ul {
-            display: flex;
-            > li {
-                display: inline-block;
-                margin-left: 10px;
-                > a {
-                    color: $text-color;
-                }
-            }
+.Header {
+  .HeaderContent {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      > li {
+        display: inline-block;
+        margin-left: 10px;
+        > a {
+          color: $text-color;
         }
+      }
     }
+  }
 }
