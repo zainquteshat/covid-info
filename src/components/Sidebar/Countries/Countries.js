@@ -1,15 +1,16 @@
 import React from "react";
 import classes from "./Countries.module.scss";
 
-const Countries = ({ allCountries }) => {
+const Countries = ({ countriesAndCases }) => {
   return (
     <div className={classes.Countries}>
       <label> Select a country: </label>
       <select>
-        {allCountries.map((country, index) => {
+        <option value="all"> All </option>
+        {countriesAndCases.map((countryData) => {
           return (
-            <option key={index} value={country}>
-              {country}
+            <option key={countryData.ID} value={countryData.ID}>
+              {countryData.Country}
             </option>
           );
         })}
