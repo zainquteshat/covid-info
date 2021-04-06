@@ -6,10 +6,11 @@ const CoronaChart = () => {
   return (
     <div className={classes.Chart}>
       <Chart
+        height="500px"
         chartType="LineChart"
         loader={<div>Loading Chart</div>}
         data={[
-          ["x", "dogs", "cats", "monkeys"],
+          ["x", "Total", "Deaths", "Recovered"],
           [0, 0, 0, 3],
           [1, 10, 5, 2],
           [2, 23, 15, 23],
@@ -21,16 +22,12 @@ const CoronaChart = () => {
         ]}
         options={{
           hAxis: {
-            title: "Time",
+            title: "Days",
           },
           vAxis: {
-            title: "Popularity",
-          },
-          series: {
-            1: { curveType: "function" },
+            title: "Number of cases",
           },
         }}
-        rootProps={{ "data-testid": "2" }}
       />
     </div>
   );
