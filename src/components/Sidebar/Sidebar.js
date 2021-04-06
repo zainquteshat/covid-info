@@ -3,14 +3,14 @@ import Cases from "./Cases/Cases";
 import Countries from "./Countries/Countries";
 import classes from "./Sidebar.module.scss";
 
-const Sidebar = ({ globalCases, countriesAndCases }) => {
-  const { TotalConfirmed, NewDeaths, TotalRecovered } = globalCases;
+const Sidebar = ({ countries, globalCases }) => {
+  const { TotalConfirmed, TotalDeaths, TotalRecovered } = globalCases;
   return (
     <div className={classes.Sidebar}>
-      <Countries countriesAndCases={countriesAndCases} />
+      <Countries countries={countries} />
       <Cases
         numberTotal={TotalConfirmed}
-        numberDeaths={NewDeaths}
+        numberDeaths={TotalDeaths}
         numberRecovered={TotalRecovered}
       />
     </div>

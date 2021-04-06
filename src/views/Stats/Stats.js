@@ -8,19 +8,35 @@ import classes from "./Stats.module.scss";
 
 const Stats = () => {
   let [globalCases, setGlobalCases] = useState([]);
-  let [countriesAndCases, setCountriesandCases] = useState([]);
+  let [countries, setCountries] = useState([]);
 
-  useEffect(() => {
+  const fetchCountries = () => {
     // TODO: save data to redux store instead
     // TODO: add spinner
     // TODO: handle error
     axios
-      .get("https://api.covid19api.com/summary")
+      .get("https://api.covid19api.com/countries")
       .then((response) => {
-        setGlobalCases(response.data.Global);
-        setCountriesandCases(response.data.Countries);
+        setCountries(response.data);
       })
       .catch((error) => console.error("Error:" + error));
+  };
+
+  const fetchGlobalCases = () => {
+    // TODO: save data to redux store instead
+    // TODO: add spinner
+    // TODO: handle error
+    axios
+      .get("https://api.covid19api.com/world/total")
+      .then((response) => {
+        setGlobalCases(response.data);
+      })
+      .catch((error) => console.error("Error:" + error));
+  };
+
+  useEffect(() => {
+    fetchCountries();
+    fetchGlobalCases();
   }, []);
 
   return (
@@ -31,10 +47,7 @@ const Stats = () => {
             <Chart />
           </Grid>
           <Grid item md={4}>
-            <Sidebar
-              globalCases={globalCases}
-              countriesAndCases={countriesAndCases}
-            />
+            <Sidebar countries={countries} globalCases={globalCases} />
           </Grid>
         </Grid>
       </Container>
