@@ -1,3 +1,21 @@
+@import "../../../../styles/variables";
+
 .Case {
   display: flex;
+}
+
+.Total {
+  color: $neutral-color;
+}
+
+.Deaths {
+  color: $danger-color;
+}
+
+.Recovered {
+  color: $success-color;
+}
+
+.NumberOfCases {
+  margin-left: 15px;
 }

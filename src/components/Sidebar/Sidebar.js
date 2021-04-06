@@ -6,10 +6,10 @@ import classes from "./Sidebar.module.scss";
 const Sidebar = () => {
   return (
     <div className={classes.Sidebar}>
-      <Cases numberTotal="838642" numberDeaths="1304" numberRecovered="52454" />
       <Countries
         allCountries={["Germany", "Netherlands", "France", "Belgium"]}
       />
+      <Cases numberTotal="838642" numberDeaths="1304" numberRecovered="52454" />
     </div>
   );
 };

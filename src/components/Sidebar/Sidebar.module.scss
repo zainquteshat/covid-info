@@ -1,3 +1,8 @@
+@import "../../styles/variables";
+
 .Sidebar {
   color: white;
+  border: 1px solid $primary-color;
+  text-transform: uppercase;
+  padding: 15px;
 }

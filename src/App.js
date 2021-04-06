@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import Stats from "./views/Stats/Stats";
 
 import "./App.module.scss";
-
 const App = () => {
   return (
     <div className="App">
